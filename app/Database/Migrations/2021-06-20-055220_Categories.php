@@ -8,6 +8,7 @@ class Categories extends Migration
 {
 	public function up()
 	{
+		$this->db->disableForeignKeyChecks();
 		$this->forge->addField([
 			'id' => [
 				'type'           => 'INT',
@@ -22,6 +23,7 @@ class Categories extends Migration
 
 		$this->forge->addKey('id', TRUE);
 		$this->forge->createTable('categories', TRUE);
+		$this->db->enableForeignKeyChecks();
 	}
 
 	public function down()

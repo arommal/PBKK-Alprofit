@@ -8,6 +8,7 @@ class Roles extends Migration
 {
 	public function up()
 	{
+		$this->db->disableForeignKeyChecks();
 		$this->forge->addField([
 			'id' => [
 				'type'           => 'INT',
@@ -22,6 +23,7 @@ class Roles extends Migration
 
 		$this->forge->addKey('id', TRUE);
 		$this->forge->createTable('roles', TRUE);
+		$this->db->enableForeignKeyChecks();
 	}
 
 	public function down()

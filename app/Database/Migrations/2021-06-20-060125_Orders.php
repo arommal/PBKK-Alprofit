@@ -8,6 +8,7 @@ class Orders extends Migration
 {
 	public function up()
 	{
+		$this->db->disableForeignKeyChecks();
 		$this->forge->addField([
 			'id' => [
 				'type'           	=> 'INT',
@@ -28,6 +29,7 @@ class Orders extends Migration
 		$this->forge->addKey('id', TRUE);
 		$this->forge->addForeignKey('user_id', 'users', 'id');
 		$this->forge->createTable('orders', TRUE);
+		$this->db->enableForeignKeyChecks();
 	}
 
 	public function down()

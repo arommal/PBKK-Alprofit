@@ -8,6 +8,7 @@ class CartItems extends Migration
 {
 	public function up()
 	{
+		$this->db->disableForeignKeyChecks();
 		$this->forge->addField([
 			'id' => [
 				'type'           	=> 'INT',
@@ -28,6 +29,7 @@ class CartItems extends Migration
 		$this->forge->addForeignKey('cart_id', 'carts', 'id');
 		$this->forge->addForeignKey('product_id', 'products', 'id');
 		$this->forge->createTable('cart_items', TRUE);
+		$this->db->enableForeignKeyChecks();
 	}
 
 	public function down()
