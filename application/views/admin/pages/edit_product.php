@@ -14,22 +14,22 @@
         </li>
     </ul>
 
-    <div class="row-fluid sortable">
+    <div class="row-fluid">
         <div class="box span12">
             <div class="box-header" data-original-title>
-                <h2><i class="halflings-icon edit"></i><span class="break"></span>Edit Product</h2>
-                <div class="box-icon">
+                <h2><strong>Edit Product</strong></h2>
+                <!-- <div class="box-icon">
                     <a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
                     <a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
                     <a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
-                </div>
+                </div> -->
             </div>
             <style type="text/css">
                 #result{color:red;padding: 5px}
                 #result p{color:red}
             </style>
             <div id="result">
-                <p><?php echo $this->session->flashdata('message');?></p>
+                <!-- <p><?php echo $this->session->flashdata('message');?></p> -->
             </div>
             <div class="box-content">
                 <form name="formName" class="form-horizontal" action="<?php echo base_url('update/product/'.$product_info_by_id->product_id);?>" method="post" enctype="multipart/form-data">
@@ -120,14 +120,14 @@
                             <div class="controls">
                                 <select id="publication_status" name="publication_status">
                                     <option value="1">Published</option>
-                                    <option value="0">UnPublished</option>
+                                    <option value="0">Unpublished</option>
                                 </select>
                             </div>
                         </div>
                         
                         <div class="form-actions">
                             <button type="submit" class="btn btn-primary">Save changes</button>
-                            <button type="reset" class="btn">Cancel</button>
+                            <!-- <button type="reset" class="btn">Cancel</button> -->
                         </div>
                     </fieldset>
                 </form>   
