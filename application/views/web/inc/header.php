@@ -76,11 +76,7 @@
                     }
                     ?>"><a href="<?php echo base_url('/cart'); ?>">Cart</a></li>
                     <?php } ?>
-                <li class="<?php
-                if ($this->uri->uri_string() == 'contact') {
-                    echo "active";
-                }
-                ?>"><a href="<?php echo base_url('/contact'); ?>">Contact</a> </li>
+                
                 
                 <?php if(!$this->session->userdata('customer_id')){?>
                 
