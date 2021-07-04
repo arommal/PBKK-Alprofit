@@ -52,7 +52,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="<?php echo base_url('dashboard')?>"><span>E-Shop Admin Panel</span></a>
+                    <a class="brand" href="<?php echo base_url('dashboard')?>"><span>Alprofit Admin Panel</span></a>
 
                     <!-- start: Header Menu -->
                     <div class="nav-no-collapse header-nav">
@@ -67,7 +67,7 @@
                                     <li class="dropdown-menu-title">
                                         <span>Account Settings</span>
                                     </li>
-                                    <li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
+                                    <!-- <li><a href="#"><i class="halflings-icon user"></i> Profile</a></li> -->
                                     <li><a href="<?php echo base_url('logout')?>"><i class="halflings-icon off"></i> Logout</a></li>
                                 </ul>
                             </li>
