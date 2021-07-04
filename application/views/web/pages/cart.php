@@ -45,7 +45,7 @@
 
 
                     </table>
-                    <table style="float:right;text-align:left;" width="40%">
+                    <table style="float:right;text-align:left;" width="30%">
                         <tr>
                             <th>Sub Total : </th>
                             <td>Rp. <?php echo $this->cart->format_number($this->cart->total()) ?></td>
