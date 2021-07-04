@@ -104,7 +104,7 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                <td>= <?php echo $order_info->order_total ?> Tk</td>
+                                <td>=Rp. <?php echo $order_info->order_total ?></td>
                                 </tfoot>
                             </table>
                         </div>
