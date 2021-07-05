@@ -3,7 +3,7 @@
 <div class="main">
     <div class="content" style="text-align: center">
          <div class="login_panel" style="width:400px;text-align:center;display:inline-block;float: none">
-            <h3>Existing Customers</h3>
+            <h3>Existing Customer</h3>
             <p>Sign in with the form below.</p>
             <style type="text/css">
                 #result{color:red;padding: 5px}
@@ -14,10 +14,14 @@
             </div>
             
             <form action="<?php echo base_url('customer/logincheck');?>" method="post">
-                <input name="customer_email" placeholder="Enter Your Email" type="text"/>
-                <input name="customer_password" placeholder="Enter Your Password" type="password"/>
-                <p class="note">If you forgot your passoword just enter your email and click <a href="#">here</a></p>
-                <div class="buttons"><div><button class="grey">Sign In</button></div></div>
+                <label for="customer_email">Email</label>
+                <input id="customer_email" name="customer_email" placeholder="Enter Your Email" type="text"/>
+                <label for="customer_password">Password</label>
+                <input id="customer_password" name="customer_password" placeholder="Enter Your Password" type="password"/>
+                <div class="buttons" style="padding-top: 20px">
+                    <div><button class="grey">Sign In</button></div>
+                    <div style="padding-top: 10px">Or <a href="<?php echo base_url('/customer/register'); ?>">register a new account</div>
+                </div>
             </form>
         </div>	
         <div class="clear"></div>

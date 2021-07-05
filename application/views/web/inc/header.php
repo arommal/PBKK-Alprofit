@@ -48,7 +48,7 @@
                     <div class="login"><a href="<?php echo base_url('/customer/logout'); ?>">Logout</a></div>
                 <?php } else {
                     ?>
-                    <div class="login"><a href="<?php echo base_url('/customer/login'); ?>">login</a></div>
+                    <div class="login"><a href="<?php echo base_url('/customer/login'); ?>">Login</a></div>
 
                     <?php
                 }
@@ -76,22 +76,6 @@
                     }
                     ?>"><a href="<?php echo base_url('/cart'); ?>">Cart</a></li>
                     <?php } ?>
-                
-                
-                <?php if(!$this->session->userdata('customer_id')){?>
-                
-                <li class="<?php
-                if ($this->uri->uri_string() == 'customer/login') {
-                    echo "active";
-                }
-                ?>"><a href="<?php echo base_url('/customer/login'); ?>">Login</a> </li>
-                <li class="<?php
-                if ($this->uri->uri_string() == 'customer/register') {
-                    echo "active";
-                }
-                ?>"><a href="<?php echo base_url('/customer/register'); ?>">Register</a> </li>
-                
-                <?php }?>
                 
             </ul>
             <div class="clear"></div>

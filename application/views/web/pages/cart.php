@@ -47,11 +47,11 @@
                     </table>
                     <table style="float:right;text-align:left;" width="30%">
                         <tr>
-                            <th>Sub Total : </th>
+                            <th style="font-weight:bold">Total</th>
                             <td>Rp. <?php echo $this->cart->format_number($this->cart->total()) ?></td>
                         </tr>
                         <tr>
-                            <th>VAT : </th>
+                            <th style="font-weight:bold">Shipping</th>
                             <td>Rp. 
                                 <?php
                                 $total = $this->cart->total();
@@ -61,30 +61,36 @@
                             </td>
                         </tr>
                         <tr>
-                            <th>Grand Total :</th>
+                            <th style="font-weight:bold">Sub Total</th>
                             <td>Rp. <?php echo $this->cart->format_number($tax + $this->cart->total()); ?> </td>
                         </tr>
                     </table>
                     <?php
                 } else {
-                    echo "<h1>Your Cart Empty</h1>";
+                    echo "<h1>Your Cart Is Empty</h1>";
                 }
                 ?>
             </div>
             <div class="shopping">
                 <div class="shopleft">
-                    <a href="<?php echo base_url('product') ?>"> <img src="<?php echo base_url() ?>assets/web/images/shop.png" alt="" /></a>
+                    <a href="<?php echo base_url('product') ?>" class="buttons">
+                        <button class="grey">Continue Shopping</button>
+                    </a>
                 </div>
                 <div class="shopright">
                     <?php
                     $customer_id = $this->session->userdata('customer_id');
                     if (empty($customer_id)) {
                         ?>
-                        <a href="<?php echo base_url('user_form') ?>"> <img src="<?php echo base_url() ?>assets/web/images/check.png" alt="" /></a>
+                        <a href="<?php echo base_url('user_form') ?>" class="buttons">
+                            <button class="pink">Checkout</button>
+                        </a>
                         <?php
                     } elseif (!empty($customer_id)) {
                         ?>
-                        <a href = "<?php echo base_url('customer/shipping') ?>"> <img src = "<?php echo base_url() ?>assets/web/images/check.png" alt = "" /></a>
+                        <a href = "<?php echo base_url('customer/shipping') ?>" class="buttons">
+                            <button class="pink">Checkout</button>
+                        </a>
                         <?php
                     }
                     ?>
