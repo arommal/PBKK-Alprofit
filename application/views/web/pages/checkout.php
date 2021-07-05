@@ -9,7 +9,7 @@
                 #result p{color:red}
             </style>
             <div id="result">
-                <p><?php echo $this->session->flashdata('message'); ?></p>
+                <!-- <p><?php echo $this->session->flashdata('message'); ?></p> -->
             </div>
             <form method="post" action="<?php echo base_url('save/order');?>" style="text-align: left">
                 <span><input type="radio" name="payment" value="cashon"/>Cash On Delivary</span><br/>

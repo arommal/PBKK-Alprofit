@@ -10,7 +10,7 @@
                 #result p{color:red}
             </style>
             <div id="result">
-                <p><?php echo $this->session->flashdata('message'); ?></p>
+                <!-- <p><?php echo $this->session->flashdata('message'); ?></p> -->
             </div>
             
             <form action="<?php echo base_url('customer/logincheck');?>" method="post">
