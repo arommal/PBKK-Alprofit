@@ -167,16 +167,19 @@ input[type="number"] {
     color: #444;
     display: block;
     float: left;
-    font-size: 27px;
     height: 38px;
+    font-size: 13px;
     margin-left: 10px;
     text-align: center;
     width: 144px;
+    align-items: center;
+    padding: 0 0 0 10px;
+    line-height: 36px;
 }
 .login a {
     color:#333;
     padding: 0px 43px;
-    padding-bottom: 6px;
+    font-weight:bold;
 }
 /*** Login ***/
 .register_account h3,.login_panel h3{
@@ -301,6 +304,30 @@ button.grey:hover,.search button.grey:hover{
     background        : -ms-linear-gradient(top,  #525252 0%,#454646 100%);
     background        : linear-gradient(top,  #525252 0%,#454646 100%);
     filter            : progid:DXImageTransform.Microsoft.gradient( startColorstr='#525252', endColorstr='#454646',GradientType=0 );
+    text-shadow       : 0 1px 0 rgba(0, 0, 0, 0.4);  
+}
+button.pink,.search button.pink{
+    border            : 1px solid #DF4C73;
+    background        : #3f4040;
+    background        : -moz-linear-gradient(top,  #DF4C73 0%, #DF4C73 100%);
+    background        : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#DF4C73), color-stop(100%,#DF4C73));
+    background        : -webkit-linear-gradient(top,  #DF4C73 0%,#DF4C73 100%);
+    background        : -o-linear-gradient(top,  #DF4C73 0%,#DF4C73 100%);
+    background        : -ms-linear-gradient(top,  #DF4C73 0%,#DF4C73 100%);
+    background        : linear-gradient(top,  #DF4C73 0%,#DF4C73 100%);
+    filter            : progid:DXImageTransform.Microsoft.gradient( startColorstr='#DF4C73', endColorstr='#DF4C73',GradientType=0 );
+    text-shadow       : 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+button.pink:hover,.search button.pink:hover{
+    border            : 1px solid #DF4C73;
+    background        : #DF4C73;
+    background        : -moz-linear-gradient(top,  #DF4C73 0%, #DF4C73 100%);
+    background        : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#DF4C73), color-stop(100%,#DF4C73));
+    background        : -webkit-linear-gradient(top,  #DF4C73 0%,#DF4C73 100%);
+    background        : -o-linear-gradient(top,  #DF4C73 0%,#DF4C73 100%);
+    background        : -ms-linear-gradient(top,  #DF4C73 0%,#DF4C73 100%);
+    background        : linear-gradient(top,  #DF4C73 0%,#DF4C73 100%);
+    filter            : progid:DXImageTransform.Microsoft.gradient( startColorstr='#DF4C73', endColorstr='#DF4C73',GradientType=0 );
     text-shadow       : 0 1px 0 rgba(0, 0, 0, 0.4);  
 }
 /** End Login ***/
@@ -1446,7 +1473,7 @@ table.tblone img {
 .shopleft, .shopleft {
     float: left;
     text-align: center;
-    width: 610px;
+    width: 50vw;
 }
 .shopleft img{outline:none}
 .shopleft a,.shopright a{outline:none}

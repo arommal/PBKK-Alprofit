@@ -33,7 +33,7 @@ class AdminLogin extends CI_Controller
                 $this->session->set_userdata('user_email', $result->user_email);
                 $this->session->set_userdata('user_name', $result->user_name);
                 $this->session->set_userdata('user_id', $result->user_id);
-                redirect('dashboard');
+                redirect('manage/order');
             } else {
                 $this->session->set_flashdata('message', 'Your Email Or Password Does Not Match');
                 redirect('admin');

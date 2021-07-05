@@ -5,7 +5,7 @@
     <ul class="breadcrumb">
         <li>
             <i class="icon-home"></i>
-            <a href="<?php echo base_url('dashboard')?>">Home</a> 
+            <a href="<?php echo base_url('manage/order')?>">Home</a> 
             <i class="icon-angle-right"></i>
         </li>
         <li><a href="<?php echo base_url('manage/product')?>">Manage Product</a></li>
@@ -53,7 +53,7 @@
                             <td><?php echo $i;?></td>
                             <td class="center"><?php echo $single_product->product_title;?></td>
                             <td class="center"><img src="<?php echo base_url('uploads/'.$single_product->product_image);?>" style="width:200px;height:75px"/></td>
-                            <td class="center">Rp.<?php echo $this->cart->format_number($single_product->product_price);?></td>
+                            <td class="center">Rp <?php echo $this->cart->format_number($single_product->product_price);?></td>
                             <td class="center"><?php echo $single_product->product_quantity;?></td>
                             <td class="center">
                                 <?php if ($single_product->pstatus == 1) { ?>
