@@ -171,7 +171,6 @@ class Web extends CI_Controller
         $data['customer_password'] = md5($this->input->post('customer_password'));
         $data['customer_address']  = $this->input->post('customer_address');
         $data['customer_city']     = $this->input->post('customer_city');
-        $data['customer_country']  = $this->input->post('customer_country');
         $data['customer_phone']    = $this->input->post('customer_phone');
         $data['customer_zipcode']  = $this->input->post('customer_zipcode');
 
@@ -180,7 +179,6 @@ class Web extends CI_Controller
         $this->form_validation->set_rules('customer_password', 'Customer Password', 'trim|required');
         $this->form_validation->set_rules('customer_address', 'Customer Address', 'trim|required');
         $this->form_validation->set_rules('customer_city', 'Customer City', 'trim|required');
-        $this->form_validation->set_rules('customer_country', 'Customer Country', 'trim|required');
         $this->form_validation->set_rules('customer_phone', 'Customer Phone', 'trim|required');
         $this->form_validation->set_rules('customer_zipcode', 'Customer Zipcode', 'trim|required');
 
@@ -258,7 +256,6 @@ class Web extends CI_Controller
         $data['customer_password'] = md5($this->input->post('customer_password'));
         $data['customer_address']  = $this->input->post('customer_address');
         $data['customer_city']     = $this->input->post('customer_city');
-        $data['customer_country']  = $this->input->post('customer_country');
         $data['customer_phone']    = $this->input->post('customer_phone');
         $data['customer_zipcode']  = $this->input->post('customer_zipcode');
 
@@ -267,7 +264,6 @@ class Web extends CI_Controller
         $this->form_validation->set_rules('customer_password', 'Customer Password', 'trim|required');
         $this->form_validation->set_rules('customer_address', 'Customer Address', 'trim|required');
         $this->form_validation->set_rules('customer_city', 'Customer City', 'trim|required');
-        $this->form_validation->set_rules('customer_country', 'Customer Country', 'trim|required');
         $this->form_validation->set_rules('customer_phone', 'Customer Phone', 'trim|required');
         $this->form_validation->set_rules('customer_zipcode', 'Customer Zipcode', 'trim|required');
 
