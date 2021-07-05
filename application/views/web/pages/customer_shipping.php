@@ -45,8 +45,7 @@
                             </td>
                         </tr> 
                     </tbody></table> 
-                <div class="search"><div><button class="grey">Create Account</button></div></div>
-                <p class="terms">By clicking 'Create Account' you agree to the <a href="#">Terms &amp; Conditions</a>.</p>
+                <div class="search"><div><button class="grey">Confirm</button></div></div>
                 <div class="clear"></div>
             </form>
         </div>  	

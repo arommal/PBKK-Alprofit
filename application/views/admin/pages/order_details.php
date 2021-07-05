@@ -59,7 +59,7 @@
                     <h2>Customer Info(00<?php echo $shipping_info->shipping_id; ?>)</h2>
                     <table class="table table-striped table-bordered">
                         <tr>
-                            <td>Shpping Name : </td>
+                            <td>Shipping Name : </td>
                             <td><?php echo $shipping_info->shipping_name; ?></td>
                         </tr>
                         <tr>
