@@ -57,7 +57,7 @@
                             #result p{color:red}
                         </style>
                         <div id="result">
-                            <p><?php echo $this->session->flashdata('message');?></p>
+                            <!-- <p><?php echo $this->session->flashdata('message');?></p> -->
                         </div>
                         <form id="adminlogincheck" class="form-horizontal" action="<?php echo base_url()?>admin_login_check" method="post">
                             <fieldset>
