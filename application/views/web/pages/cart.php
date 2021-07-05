@@ -8,7 +8,7 @@
                 <?php if ($this->cart->total_items()) { ?>
                     <table class="tblone">
                         <tr>
-                            <th width="5%">Sr.</th>
+                            <th width="5%">No.</th>
                             <th width="30%">Product Name</th>
                             <th width="10%">Image</th>
                             <th width="15%">Price</th>
