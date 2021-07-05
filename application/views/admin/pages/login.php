@@ -51,11 +51,7 @@
 
                 <div class="row-fluid">
                     <div class="login-box">
-                        <div class="icons">
-                            <a href="<?php echo base_url('dashboard');?>"><i class="halflings-icon home"></i></a>
-                            <a href="#"><i class="halflings-icon cog"></i></a>
-                        </div>
-                        <h2>Login to your account</h2>
+                        <h2 class="text-center" style="color:black">Login Admin</h2>
                         <style type="text/css">
                             #result{color:red}
                             #result p{color:red}
@@ -78,20 +74,19 @@
                                 </div>
                                 <div class="clearfix"></div>
 
-                                <label class="remember" for="remember"><input type="checkbox" id="remember" />Remember me</label>
+                                <!-- <label class="remember" for="remember"><input type="checkbox" id="remember" />Remember me</label> -->
 
                                 <div class="button-login">	
                                     <button type="submit" class="btn btn-primary adminlogincheck">Login</button>
                                 </div>
                                 <div class="clearfix"></div>
-                                                          </fieldset>
-  
+                            </fieldset>
                         </form>
-                        <hr>
+                        <!-- <hr>
                         <h3>Forgot Password?</h3>
                         <p>
                             No problem, <a href="#">click here</a> to get a new password.
-                        </p>	
+                        </p>	 -->
                     </div><!--/span-->
                 </div><!--/row-->
 

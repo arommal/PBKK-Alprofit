@@ -5,7 +5,7 @@
     <ul class="breadcrumb">
         <li>
             <i class="icon-home"></i>
-            <a href="<?php echo base_url('dashboard')?>">Home</a> 
+            <a href="<?php echo base_url('manage/order')?>">Home</a> 
             <i class="icon-angle-right"></i>
         </li>
         <li><a href="<?php echo base_url('manage/product')?>">Manage Product</a></li>
@@ -53,11 +53,11 @@
                             <td><?php echo $single_order->customer_name?></td>
                             <td><?php echo $single_order->customer_phone?></td>
                             <td><?php echo $single_order->customer_email?></td>
-                            <td>Rp.<?php echo $this->cart->format_number($single_order->order_total)?></td>
+                            <td>Rp <?php echo $this->cart->format_number($single_order->order_total)?></td>
                             <td>
-                                <a class="btn btn-warning"><?php echo $single_order->actions?></a>
+                                <!-- <a class="btn btn-warning"><?php echo $single_order->actions?></a> -->
                                 <a class="btn btn-danger" href="<?php echo base_url('order/details/'.$single_order->order_id);?>">View</a>
-                                <a class="btn btn-success" href="<?php echo base_url('web/pdf/'.$single_order->order_id);?>">Download</a>
+                                <!-- <a class="btn btn-success" href="<?php echo base_url('web/pdf/'.$single_order->order_id);?>">Download</a> -->
                             </td>
                         </tr>
                         <?php }?>

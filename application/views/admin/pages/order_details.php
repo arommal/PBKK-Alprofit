@@ -5,7 +5,7 @@
     <ul class="breadcrumb">
         <li>
             <i class="icon-home"></i>
-            <a href="<?php echo base_url('dashboard') ?>">Home</a> 
+            <a href="<?php echo base_url('manage/order') ?>">Home</a> 
             <i class="icon-angle-right"></i>
         </li>
         <li><a href="<?php echo base_url('manage/order') ?>">Order Details</a></li>
@@ -98,15 +98,15 @@
                                 <td><?php echo $i; ?></td>
                                 <td><?php echo $single_order_details->product_name ?></td>
                                 <td><img src="<?php echo base_url('uploads/'.$single_order_details->product_image);?>" style="width:200px;height:100px"/></td>
-                                <td>Rp.<?php echo $this->cart->format_number($single_order_details->product_price)?></td>
+                                <td>Rp <?php echo $this->cart->format_number($single_order_details->product_price)?></td>
                                 <td><?php echo $single_order_details->product_sales_quantity ?></td>
-                                <td>Rp.<?php echo $this->cart->format_number($single_order_details->product_price * $single_order_details->product_sales_quantity) ?></td>
+                                <td>Rp <?php echo $this->cart->format_number($single_order_details->product_price * $single_order_details->product_sales_quantity) ?></td>
                             </tr>
                         <?php } ?>
                     </tbody>
                     <tfooter>
                         <td colspan="5">Total Amount</td>
-                        <td>=Rp. <?php echo $this->cart->format_number($order_info->order_total)?></td>
+                        <td>Rp <?php echo $this->cart->format_number($order_info->order_total)?></td>
                     </tfooter>
                 </table>            
             </div>
