@@ -37,25 +37,7 @@
                                     <input type="text" value="Address" onfocus="this.value = '';" onblur="if (this.value == '') {
                                                 this.value = 'Address';
                                             }">
-                                </div>
-                                <div>
-                                    <select id="country" name="country" onchange="change_country(this.value)" class="frm-field required">
-                                        <option value="null">Select a Country</option>         
-                                        <option value="AF">Afghanistan</option>
-                                        <option value="AL">Albania</option>
-                                        <option value="DZ">Algeria</option>
-                                        <option value="AR">Argentina</option>
-                                        <option value="AM">Armenia</option>
-                                        <option value="AW">Aruba</option>
-                                        <option value="AU">Australia</option>
-                                        <option value="AT">Austria</option>
-                                        <option value="AZ">Azerbaijan</option>
-                                        <option value="BS">Bahamas</option>
-                                        <option value="BH">Bahrain</option>
-                                        <option value="BD">Bangladesh</option>
-
-                                    </select>
-                                </div>		        
+                                </div>      
 
                                 <div>
                                     <input type="text" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {

@@ -41,14 +41,14 @@ class Category extends CI_Controller
             $result = $this->category_model->save_category_info($data);
             if ($result) {
                 $this->session->set_flashdata('message', 'Category Inseted Sucessfully');
-                redirect('manage/category');
+                redirect('manage/category', 'refresh');
             } else {
                 $this->session->set_flashdata('message', 'Category Inserted Failed');
-                redirect('manage/category');
+                redirect('manage/category', 'refresh');
             }
         } else {
             $this->session->set_flashdata('message', validation_errors());
-            redirect('add/category');
+            redirect('add/category', 'refresh');
         }
 
     }
@@ -58,10 +58,10 @@ class Category extends CI_Controller
         $result = $this->category_model->delete_category_info($id);
         if ($result) {
             $this->session->set_flashdata('message', 'Category Deleted Sucessfully');
-            redirect('manage/category');
+            redirect('manage/category', 'refresh');
         } else {
             $this->session->set_flashdata('message', 'Category Deleted Failed');
-            redirect('manage/category');
+            redirect('manage/category', 'refresh');
         }
     }
 
@@ -88,14 +88,14 @@ class Category extends CI_Controller
             $result = $this->category_model->update_category_info($data, $id);
             if ($result) {
                 $this->session->set_flashdata('message', 'Category Update Sucessfully');
-                redirect('manage/category');
+                redirect('manage/category', 'refresh');
             } else {
                 $this->session->set_flashdata('message', 'Category Update Failed');
-                redirect('manage/category');
+                redirect('manage/category', 'refresh');
             }
         } else {
             $this->session->set_flashdata('message', validation_errors());
-            redirect('add/category');
+            redirect('add/category', 'refresh');
         }
 
     }
@@ -105,10 +105,10 @@ class Category extends CI_Controller
         $result = $this->category_model->published_category_info($id);
         if ($result) {
             $this->session->set_flashdata('message', 'Published Category Sucessfully');
-            redirect('manage/category');
+            redirect('manage/category', 'refresh');
         } else {
             $this->session->set_flashdata('message', 'Published Category  Failed');
-            redirect('manage/category');
+            redirect('manage/category', 'refresh');
         }
     }
 
@@ -117,10 +117,10 @@ class Category extends CI_Controller
         $result = $this->category_model->unpublished_category_info($id);
         if ($result) {
             $this->session->set_flashdata('message', 'UnPublished Category Sucessfully');
-            redirect('manage/category');
+            redirect('manage/category', 'refresh');
         } else {
             $this->session->set_flashdata('message', 'UnPublished Category  Failed');
-            redirect('manage/category');
+            redirect('manage/category', 'refresh');
         }
     }
 

@@ -50,7 +50,7 @@ class Slider extends CI_Controller
             if (!$this->upload->do_upload('slider_image')) {
                 $error = $this->upload->display_errors();
                 $this->session->set_flashdata('message', $error);
-                redirect('add/slider');
+                redirect('add/slider', 'refresh');
             } else {
                 $post_image           = $this->upload->data();
                 $data['slider_image'] = $post_image['file_name'];
@@ -62,14 +62,14 @@ class Slider extends CI_Controller
 
             if ($result) {
                 $this->session->set_flashdata('message', 'Slider Inserted Sucessfully');
-                redirect('manage/slider');
+                redirect('manage/slider', 'refresh');
             } else {
                 $this->session->set_flashdata('message', 'Slider Inserted Failed');
-                redirect('manage/slider');
+                redirect('manage/slider', 'refresh');
             }
         } else {
             $this->session->set_flashdata('message', validation_errors());
-            redirect('add/slider');
+            redirect('add/slider', 'refresh');
         }
     }
 
@@ -80,10 +80,10 @@ class Slider extends CI_Controller
         $result = $this->slider_model->delete_slider_info($id);
         if ($result) {
             $this->session->set_flashdata('message', 'Slider Deleted Sucessfully');
-            redirect('manage/slider');
+            redirect('manage/slider', 'refresh');
         } else {
             $this->session->set_flashdata('message', 'Slider Deleted Failed');
-            redirect('manage/slider');
+            redirect('manage/slider', 'refresh');
         }
     }
 
@@ -120,7 +120,7 @@ class Slider extends CI_Controller
             if (!$this->upload->do_upload('slider_image')) {
                 $error = $this->upload->display_errors();
                 $this->session->set_flashdata('message', $error);
-                redirect('add/slider');
+                redirect('add/slider', 'refresh');
             } else {
                 $post_image           = $this->upload->data();
                 $data['slider_image'] = $post_image['file_name'];
@@ -133,14 +133,14 @@ class Slider extends CI_Controller
 
             if ($result) {
                 $this->session->set_flashdata('message', 'Slider Updated Sucessfully');
-                redirect('manage/slider');
+                redirect('manage/slider', 'refresh');
             } else {
                 $this->session->set_flashdata('message', 'Slider Updated Failed');
-                redirect('manage/slider');
+                redirect('manage/slider', 'refresh');
             }
         } else {
             $this->session->set_flashdata('message', validation_errors());
-            redirect('add/slider');
+            redirect('add/slider', 'refresh');
         }
 
     }
@@ -150,10 +150,10 @@ class Slider extends CI_Controller
         $result = $this->slider_model->published_slider_info($id);
         if ($result) {
             $this->session->set_flashdata('message', 'Published Slider Sucessfully');
-            redirect('manage/slider');
+            redirect('manage/slider', 'refresh');
         } else {
             $this->session->set_flashdata('message', 'Published Slider  Failed');
-            redirect('manage/slider');
+            redirect('manage/slider', 'refresh');
         }
     }
 
@@ -162,10 +162,10 @@ class Slider extends CI_Controller
         $result = $this->slider_model->unpublished_slider_info($id);
         if ($result) {
             $this->session->set_flashdata('message', 'UnPublished Slider Sucessfully');
-            redirect('manage/slider');
+            redirect('manage/slider', 'refresh');
         } else {
             $this->session->set_flashdata('message', 'UnPublished Slider  Failed');
-            redirect('manage/slider');
+            redirect('manage/slider', 'refresh');
         }
     }
 

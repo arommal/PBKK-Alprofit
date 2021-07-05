@@ -40,7 +40,7 @@ class AdminLogin extends CI_Controller
             }
         } else {
             $this->session->set_flashdata('message', validation_errors());
-            redirect('admin');
+            redirect('admin', 'refresh');
         }
 
     }

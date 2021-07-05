@@ -131,7 +131,7 @@ class Web extends CI_Controller
     {
         $customer_name = $this->session->flashdata('customer_name');
         if (!$customer_name) {
-            redirect('customer/register');
+            redirect('customer/register', 'refresh');
         }
         $data = array();
         $this->load->view('web/inc/header');
@@ -187,14 +187,14 @@ class Web extends CI_Controller
             if ($result) {
                 $this->session->set_flashdata('customer_name', $data['customer_name']);
                 $this->session->set_flashdata('customer_email', $data['customer_email']);
-                redirect('register/success');
+                redirect('register/success', 'refresh');
             } else {
                 $this->session->set_flashdata('message', 'Customer Registration Fail');
-                redirect('customer/register');
+                redirect('customer/register', 'refresh');
             }
         } else {
             $this->session->set_flashdata('message', validation_errors());
-            redirect('customer/register');
+            redirect('customer/register', 'refresh');
         }
     }
 
@@ -215,11 +215,11 @@ class Web extends CI_Controller
                 redirect('/');
             } else {
                 $this->session->set_flashdata('message', 'Customer Login Fail');
-                redirect('customer/login');
+                redirect('customer/login', 'refresh');
             }
         } else {
             $this->session->set_flashdata('message', validation_errors());
-            redirect('customer/login');
+            redirect('customer/login', 'refresh');
         }
     }
 
@@ -240,11 +240,11 @@ class Web extends CI_Controller
                 redirect('customer/shipping');
             } else {
                 $this->session->set_flashdata('messagelogin', 'Customer Login Fail');
-                redirect('user_form');
+                redirect('user_form', 'refresh');
             }
         } else {
             $this->session->set_flashdata('messagelogin', validation_errors());
-            redirect('user_form');
+            redirect('user_form', 'refresh');
         }
     }
 
@@ -275,11 +275,11 @@ class Web extends CI_Controller
                 redirect('customer/shipping');
             } else {
                 $this->session->set_flashdata('message', 'Customer Shipping Fail');
-                redirect('user_form');
+                redirect('user_form', 'refresh');
             }
         } else {
             $this->session->set_flashdata('message', validation_errors());
-            redirect('user_form');
+            redirect('user_form', 'refresh');
         }
     }
 
@@ -298,7 +298,6 @@ class Web extends CI_Controller
         $data['shipping_email']   = $this->input->post('shipping_email');
         $data['shipping_address'] = $this->input->post('shipping_address');
         $data['shipping_city']    = $this->input->post('shipping_city');
-        $data['shipping_country'] = $this->input->post('shipping_country');
         $data['shipping_phone']   = $this->input->post('shipping_phone');
         $data['shipping_zipcode'] = $this->input->post('shipping_zipcode');
 
@@ -306,7 +305,6 @@ class Web extends CI_Controller
         $this->form_validation->set_rules('shipping_email', 'Shipping Email', 'trim|required|valid_email|is_unique[tbl_shipping.shipping_email]');
         $this->form_validation->set_rules('shipping_address', 'Shipping Address', 'trim|required');
         $this->form_validation->set_rules('shipping_city', 'Shipping City', 'trim|required');
-        $this->form_validation->set_rules('shipping_country', 'Shipping Country', 'trim|required');
         $this->form_validation->set_rules('shipping_phone', 'Shipping Phone', 'trim|required');
         $this->form_validation->set_rules('shipping_zipcode', 'Shipping Zipcode', 'trim|required');
 
@@ -317,11 +315,11 @@ class Web extends CI_Controller
                 redirect('checkout');
             } else {
                 $this->session->set_flashdata('message', 'Customer Shipping Fail');
-                redirect('customer/shipping');
+                redirect('customer/shipping', 'refresh');
             }
         } else {
             $this->session->set_flashdata('message', validation_errors());
-            redirect('customer/shipping');
+            redirect('customer/shipping', 'refresh');
         }
     }
 
@@ -385,7 +383,7 @@ class Web extends CI_Controller
             redirect('payment');
         } else {
             $this->session->set_flashdata('message', validation_errors());
-            redirect('checkout');
+            redirect('checkout', 'refresh');
         }
     }
 

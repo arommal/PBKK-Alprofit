@@ -65,7 +65,7 @@ class Product extends CI_Controller
             if (!$this->upload->do_upload('product_image')) {
                 $error = $this->upload->display_errors();
                 $this->session->set_flashdata('message', $error);
-                redirect('add/product');
+                redirect('add/product', 'refresh');
             } else {
                 $post_image            = $this->upload->data();
                 $data['product_image'] = $post_image['file_name'];
@@ -77,14 +77,14 @@ class Product extends CI_Controller
 
             if ($result) {
                 $this->session->set_flashdata('message', 'Product Inserted Sucessfully');
-                redirect('manage/product');
+                redirect('manage/product', 'refresh');
             } else {
                 $this->session->set_flashdata('message', 'Product Inserted Failed');
-                redirect('manage/product');
+                redirect('manage/product', 'refresh');
             }
         } else {
             $this->session->set_flashdata('message', validation_errors());
-            redirect('add/product');
+            redirect('add/product', 'refresh');
         }
     }
 
@@ -93,10 +93,10 @@ class Product extends CI_Controller
         $result = $this->product_model->published_product_info($id);
         if ($result) {
             $this->session->set_flashdata('message', 'Published Product Sucessfully');
-            redirect('manage/product');
+            redirect('manage/product', 'refresh');
         } else {
             $this->session->set_flashdata('message', 'Published Product  Failed');
-            redirect('manage/product');
+            redirect('manage/product', 'refresh');
         }
     }
     public function unpublished_product($id)
@@ -104,10 +104,10 @@ class Product extends CI_Controller
         $result = $this->product_model->unpublished_product_info($id);
         if ($result) {
             $this->session->set_flashdata('message', 'UnPublished Product Sucessfully');
-            redirect('manage/product');
+            redirect('manage/product', 'refresh');
         } else {
             $this->session->set_flashdata('message', 'UnPublished Product  Failed');
-            redirect('manage/product');
+            redirect('manage/product', 'refresh');
         }
     }
 
@@ -162,7 +162,7 @@ class Product extends CI_Controller
             if (!$this->upload->do_upload('product_image')) {
                 $error = $this->upload->display_errors();
                 $this->session->set_flashdata('message', $error);
-                redirect('add/product');
+                redirect('add/product', 'refresh');
             } else {
                 $post_image            = $this->upload->data();
                 $data['product_image'] = $post_image['file_name'];
@@ -175,14 +175,14 @@ class Product extends CI_Controller
 
             if ($result) {
                 $this->session->set_flashdata('message', 'Product Updated Sucessfully');
-                redirect('manage/product');
+                redirect('manage/product', 'refresh');
             } else {
                 $this->session->set_flashdata('message', 'Product Updated Failed');
-                redirect('manage/product');
+                redirect('manage/product', 'refresh');
             }
         } else {
             $this->session->set_flashdata('message', validation_errors());
-            redirect('add/product');
+            redirect('add/product', 'refresh');
         }
     }
 
@@ -193,10 +193,10 @@ class Product extends CI_Controller
         $result = $this->product_model->delete_product_info($id);
         if ($result) {
             $this->session->set_flashdata('message', 'Product Deleted Sucessfully');
-            redirect('manage/product');
+            redirect('manage/product', 'refresh');
         } else {
             $this->session->set_flashdata('message', 'Product Deleted Failed');
-            redirect('manage/product');
+            redirect('manage/product', 'refresh');
         }
     }
 

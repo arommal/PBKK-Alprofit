@@ -41,14 +41,14 @@ class Brand extends CI_Controller
             $result = $this->brand_model->save_brand_info($data);
             if ($result) {
                 $this->session->set_flashdata('message', 'Brand Inseted Sucessfully');
-                redirect('manage/brand');
+                redirect('manage/brand', 'refresh');
             } else {
                 $this->session->set_flashdata('message', 'Brand Inserted Failed');
-                redirect('manage/brand');
+                redirect('manage/brand', 'refresh');
             }
         } else {
             $this->session->set_flashdata('message', validation_errors());
-            redirect('add/brand');
+            redirect('add/brand', 'refresh');
         }
 
     }
@@ -58,10 +58,10 @@ class Brand extends CI_Controller
         $result = $this->brand_model->delete_brand_info($id);
         if ($result) {
             $this->session->set_flashdata('message', 'Brand Deleted Sucessfully');
-            redirect('manage/brand');
+            redirect('manage/brand', 'refresh');
         } else {
             $this->session->set_flashdata('message', 'Brand Deleted Failed');
-            redirect('manage/brand');
+            redirect('manage/brand', 'refresh');
         }
     }
 
@@ -105,10 +105,10 @@ class Brand extends CI_Controller
         $result = $this->brand_model->published_brand_info($id);
         if ($result) {
             $this->session->set_flashdata('message', 'Published Brand Sucessfully');
-            redirect('manage/brand');
+            redirect('manage/brand', 'refresh');
         } else {
             $this->session->set_flashdata('message', 'Published Brand  Failed');
-            redirect('manage/brand');
+            redirect('manage/brand', 'refresh');
         }
     }
 
@@ -117,10 +117,10 @@ class Brand extends CI_Controller
         $result = $this->brand_model->unpublished_brand_info($id);
         if ($result) {
             $this->session->set_flashdata('message', 'UnPublished Brand Sucessfully');
-            redirect('manage/brand');
+            redirect('manage/brand', 'refresh');
         } else {
             $this->session->set_flashdata('message', 'UnPublished Brand  Failed');
-            redirect('manage/brand');
+            redirect('manage/brand', 'refresh');
         }
     }
 
