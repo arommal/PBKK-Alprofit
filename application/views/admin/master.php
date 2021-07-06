@@ -52,7 +52,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="<?php echo base_url('dashboard')?>"><span>Alprofit Admin Panel</span></a>
+                    <a class="brand" href="<?php echo base_url('manage/order')?>"><span>Alprofit Admin Panel</span></a>
 
                     <!-- start: Header Menu -->
                     <div class="nav-no-collapse header-nav">
@@ -67,7 +67,6 @@
                                     <li class="dropdown-menu-title">
                                         <span>Account Settings</span>
                                     </li>
-                                    <!-- <li><a href="#"><i class="halflings-icon user"></i> Profile</a></li> -->
                                     <li><a href="<?php echo base_url('logout')?>"><i class="halflings-icon off"></i> Logout</a></li>
                                 </ul>
                             </li>
@@ -89,7 +88,6 @@
                     <div class="nav-collapse sidebar-nav">
                         <ul class="nav nav-tabs nav-stacked main-menu">
                             <li><a href="<?php echo base_url('manage/order');?>"><i class="icon-calendar"></i><span class="hidden-tablet"> Manage Order</span></a></li>
-                            <!-- <li><a href="<?php echo base_url('dashboard')?>"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>	 -->
                             <li><a href="<?php echo base_url('add/category')?>"><i class="icon-envelope"></i><span class="hidden-tablet"> Add Category</span></a></li>
                             <li><a href="<?php echo base_url('manage/category')?>"><i class="icon-tasks"></i><span class="hidden-tablet"> Manage Category</span></a></li>
                             <li><a href="<?php echo base_url('add/brand')?>"><i class="icon-edit"></i><span class="hidden-tablet"> Add Brand</span></a></li>
@@ -99,7 +97,6 @@
                           
                             <li><a href="<?php echo base_url('add/slider')?>"><i class="icon-font"></i><span class="hidden-tablet"> Add Slider</span></a></li>
                             <li><a href="<?php echo base_url('manage/slider')?>"><i class="icon-picture"></i><span class="hidden-tablet"> Manage Slider</span></a></li>
-                            <!-- <li><a href="<?php echo base_url('theme/option');?>"><i class="icon-align-justify"></i><span class="hidden-tablet"> Theme Option</span></a></li> -->
                             
                         </ul>
                     </div>

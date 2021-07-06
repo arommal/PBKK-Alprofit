@@ -37,7 +37,6 @@ $route['save/order']                     = 'web/save_order';
 $route['check_email']                    = 'web/check_email';
 
 //Admin Panel Route
-$route['dashboard']            = 'admin/index';
 $route['manage/order']         = 'manageorder/manage_order';
 $route['order/details/(:num)'] = 'manageorder/order_details/$1';
 
@@ -85,7 +84,3 @@ $route['edit/slider/(:num)']        = 'slider/edit_slider/$1';
 $route['update/slider/(:num)']      = 'slider/update_slider/$1';
 $route['published/slider/(:num)']   = 'slider/published_slider/$1';
 $route['unpublished/slider/(:num)'] = 'slider/unpublished_slider/$1';
-
-//Theme Option  Route List
-$route['theme/option'] = 'themeoption';
-$route['save/option']  = 'themeoption/save_option';

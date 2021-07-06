@@ -15,19 +15,6 @@
         <div class="box span12">
             <div class="box-header" data-original-title>
                 <h2><strong>Manage Brand</strong></h2>
-                <!-- <div class="box-icon">
-                    <a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
-                    <a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
-                    <a href="#" class="btn-close"><i class="halflings-icon remove"></i></a>
-                </div> -->
-            </div>
-
-            <style type="text/css">
-                #result{color:red;padding: 5px}
-                #result p{color:red}
-            </style>
-            <div id="result">
-                <!-- <p><?php echo $this->session->flashdata('message'); ?></p> -->
             </div>
 
             <div class="box-content">
